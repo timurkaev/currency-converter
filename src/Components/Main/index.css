@@ -1,0 +1,94 @@
+main {
+  width: 100%;
+}
+
+.content {
+  width: 900px;
+  margin: auto;
+}
+
+.firstInput,
+.secondInput {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+}
+
+input {
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid darkgray;
+  margin-bottom: 15px;
+  font-size: 17px;
+  color: gray;
+}
+
+select {
+  outline: none;
+  width: 180px;
+  height: 34px;
+  border-radius: 5px;
+}
+
+.ratesInfoBlock {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.rate {
+  width: 280px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.charCode {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.value {
+  font-size: 23px;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+.table th {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+
+.tr {
+  height: 55px;
+  border-bottom: 1px solid #dddddd;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.green {
+  background-color: rgba(0, 255, 0, 0.1);
+  border-bottom: 1px solid #dddddd;
+  height: 55px;
+}
+
+
+.table tr td:first-child,
+.table tr th:first-child {
+  border-left: none;
+}
+.table tr td:last-child,
+.table tr th:last-child {
+  border-right: none;
+}
