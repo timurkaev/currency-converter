@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import { useSelector } from "react-redux";
 
 export function Converter() {
@@ -13,31 +13,31 @@ export function Converter() {
   const [amount, setAmount] = useState();
   const [value, setValue] = useState();
 
-  console.log(value);
   const handleValue = (e) => {
     setValue(e.target.value);
+    setResult((e.target.value / value).toFixed(2));
   };
 
   const handleAmount = (e) => {
     setAmount(e.target.value);
-    setResult(e.target.value / value);
+    setResult((e.target.value / value).toFixed(2));
   };
 
   const handleFromResult = (e) => {
     setResult(e.target.value);
-    setAmount(e.target.value * value);
+    setAmount((e.target.value * value).toFixed(2));
   };
 
   return (
     <div className="inputBlock">
       <div className="firstInput">
-        <input value={parseFloat(amount)} onChange={handleAmount} type="number" />
-        <select>
+        <input value={amount} onChange={handleAmount} type="number" />
+        <select disabled>
           <option>RUB Российский рубль</option>
         </select>
       </div>
       <div className="secondInput">
-        <input  value={parseFloat(result)} onChange={handleFromResult} type="number" />
+        <input value={result} onChange={handleFromResult} type="number" />
         <select value={value} onChange={handleValue}>
           {newArr?.map((item) => {
             return (
